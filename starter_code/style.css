@@ -3,26 +3,37 @@
 	box-sizing: border-box; 
 	/* ^^^ Forces all elements to include content, padding, and border as part of their width/height calculation: 
 	http://www.w3schools.com/cssref/css3_pr_box-sizing.asp */
+	font-family: 'Proza Libre', sans-serif;
+	font-size: 14px;
+	padding: 10px;
+}
+h1 {
+	font-size: 28px;
+	margin: 25px;
 }
 
-/* 
-	Use Google Fonts to make all of the text Proza Libre.
-
-	Make the Title twice as large as the body text, bold, and give it some nice margin.
-*/
 
 /*-------- Main Styles --------*/
 
-/* 
-	Make the main container the full width of the page.
 
-	Make the two inner containers (the form and the results) float side by side, on the left side of the screen.
-
-	Every container, form, input, and button should have rounded corners.
 */
+#main {
+	width: 100%;
+}
+.container {
+	float: left;
+}
 
+.container, form, input, button, textarea {
+	border-radius: 3px;
+}
 /*-------- Form Styles --------*/
 
+.form {
+	width: inherit;
+	max-width: 500px;
+	background: #E3E6EC;
+}
 
 /* 
 
@@ -44,21 +55,29 @@
 
 	Text inputs, submit buttons, and select boxes should all be at least 48px tall. The should have 14px of padding around their text. 
 
-	Textareas should be at least 100px tall.
 
-	Text inputs, select boxes, and textareas should have a 1px border that's #CCC, and none of the default shadows.
-
-	The submit button should float to the right, be bolded, and only be as wide as the text makes it.
-
-	The submit button should be rga(39, 208, 127), but only 50% opacity. On hover, it should be 100% opacity.
-	
+	Text inputs, select boxes, and textareas should have a 1px border that's #CCC, and none of the default shadows.	
 	
 */
 
+textarea {
+	height: 100px;
+}
+#submit {
+	float: right;
+	font-weight: 700;
+	padding: 0;
+	background: rgba(39,208,127,0.5);
+}
+#submit:hover {
+	background: rgba(39,208,127,1.0);
+}
 
 /*-------- Results Styles --------*/
 
-
+.results {
+	background: #C8DBB3;
+}
 /* 
 
 	The results container should also fill the width of its container, but only up to 500px.

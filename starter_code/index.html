@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>CSS HTML Forms Lab</title>
+	<link href="https://fonts.googleapis.com/css?family=Proza+Libre:400,700" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -84,7 +85,7 @@
 				    	<input id="noun-2" name="noun-2">
 					</div>
 					<div class="row formGroup">
-				    	<input type="submit">
+				    	<input id='submit' type="submit">
 				    </div>
 				    
 			    </div>
@@ -111,24 +112,18 @@
 			 $("input[type='checkbox']:checked").each(function() {
 			 	 $selected.push($(this).attr('value'));
 			 });
-			var $adjective = $selected.join(", ");
-
-
-			
-
-			 console.log(adjective);
-			 //var ajective = $numOfAdjectives
+			 var $adjective = $selected.join(", ");
 			 var $noun = $('#noun-1').val();
 			 var $noun2 = $('#noun-2').val();
 	
-			 $(main).append("<p>Once upon a time there was a Developer named " + $name + "</p>");
-			 $(main).append("<p>" + $name + " came to General Asssembly to " + $verb + " the great mountain of programming knowledge.</p>");
+			 $('.results').append("<p>Once upon a time there was a Developer named " + $name + "</p>");
+			 $('.results').append("<p>" + $name + " came to General Asssembly to " + $verb + " the great mountain of programming knowledge.</p>");
 
-			$(main).append("<p>'" + $mission + "' " + $name + " shouted.</p>");
+			$('.results').append("<p>'" + $mission + "' " + $name + " shouted.</p>");
 
-			$(main).append("<p>Though "+$sentiment+ ", " + $name + "  was able to overcome all obstacles with the power of their " + $noun + ".</p>");
+			$('.results').append("<p>Though "+$sentiment+ ", " + $name + "  was able to overcome all obstacles with the power of their " + $noun + ".</p>");
 
-			$(main).append("<p>In the end, their success can be contributed entirely to their " + $adjective + " " + $noun2 + ".</p>");
+			$('.results').append("<p>In the end, their success can be contributed entirely to their " + $adjective + " " + $noun2 + ".</p>");
 
 		
 			// JS Native:
@@ -136,7 +131,7 @@
 			// results.innerHTML = '<h1>' + 'A true story:' + '</h1>';
 			// results.className = 'container results';
 			// main.appendChild(results);
-		}
+		};
 
 		$("form").on("submit", function(event){
 

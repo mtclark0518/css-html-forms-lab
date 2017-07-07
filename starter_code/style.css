@@ -5,11 +5,11 @@
 	http://www.w3schools.com/cssref/css3_pr_box-sizing.asp */
 	font-family: 'Proza Libre', sans-serif;
 	font-size: 14px;
-	padding: 10px;
 }
 h1 {
 	font-size: 28px;
 	margin: 25px;
+	text-align: left;
 }
 
 
@@ -18,40 +18,90 @@ h1 {
 
 */
 #main {
+	position: relative;
+	margin: 0 auto;
 	width: 100%;
 }
 .container {
 	float: left;
+	max-width: 500px;
+	padding: 1.5%;
+	margin: 1%;
+	border-radius: 5px;
 }
 
-.container, form, input, button, textarea {
-	border-radius: 3px;
-}
+
 /*-------- Form Styles --------*/
 
 .form {
-	width: inherit;
-	max-width: 500px;
+	position: relative;
+	margin: 0 auto;
+}
+
+.formSection {
 	background: #E3E6EC;
+	text-align: center;
+
+}
+.row {
+	padding: 10px;
+}
+.formGroup {
+	position: relative;
+	width: 100%;
+	display: inline-block;
+	margin-bottom: 12px;
+}
+.formGroup label {
+	width: 100%;
+	display: block;
+	text-align: left;
+	margin-bottom: 5px;
+}
+
+input, button, textarea, select {
+	border-radius: 5px;
+	border: 1px solid rgba(0,0,0,.3);
+	width: 100%;
+	min-height: 48px;
+	padding: 14px;
+}
+
+.check {
+	margin-left: 14px;
+	text-align: left;
+	padding: 10px 0;
+}
+
+.radio {
+	margin-left: 14px;
+	text-align: left;
+	padding: 10px 0;
+}
+
+.check label {
+	display: inline;
+}
+
+.radio label {
+	display: inline;
+}
+
+#check1, #check2, #check3, #radio1, #radio2, #radio3  {
+	width: initial;
 }
 
 /* 
 
-	Make sure the form itself fills the width of whatever container its in, but no larger than 500px.
 	
-	The background should be #E3E6EC, and it should align to the middle of its container.
 	
 	Every element should have nice, even padding or margin around it.
 
 	.row elements should be spaced out so they're not touching.
 
-	.formGroup elements should fill the width of their container, and be inline-block.
 
-	The labels inside of .formGroup should be on their own line above form options, fill the width of their container, and have top/bottom padding.
 
-	Radio buttons and checkbox options should each be on their own line, and indented a little. 
 
-	Radio buttons and checkbox labels should be directly to the right of their corresponding inputs, and the text should vertically align with the inputs. 
 
 	Text inputs, submit buttons, and select boxes should all be at least 48px tall. The should have 14px of padding around their text. 
 
@@ -59,15 +109,20 @@ h1 {
 	Text inputs, select boxes, and textareas should have a 1px border that's #CCC, and none of the default shadows.	
 	
 */
-
+#verb-1 {
+	height: 48px;
+}
 textarea {
 	height: 100px;
 }
 #submit {
 	float: right;
 	font-weight: 700;
-	padding: 0;
+	font-size: 12px;
+	width: 100px;
+	padding: 14px;
 	background: rgba(39,208,127,0.5);
+	border: none;
 }
 #submit:hover {
 	background: rgba(39,208,127,1.0);
@@ -77,6 +132,8 @@ textarea {
 
 .results {
 	background: #C8DBB3;
+	text-align: left;
+	padding: 14px;
 }
 /* 
 
